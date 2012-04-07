@@ -614,7 +614,6 @@
       (cond
         ((zerop n))
         (pos
-          (sink-fresh-line sink)
           (while (< pos n)
             (let* ((w (or (position-if #'whitespacep data :start (1+ pos)) n))
                    (next (or (position-if-not #'whitespacep data :start w) n)))
